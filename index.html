@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Форма и ссылки</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Гиперссылки</h1>
+        <p> Для большенства ссылок использовалась https://example.com/</p>
+        <ul>
+            <li><a href="https://www.kubsu.ru/">абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
+            <li><a href="kubsu.ru/">абсолютную на главную сайта kubsu.ru в протоколе https</a></li>
+            <li><a href="http://example.com/">
+                    <img src=file:///C:/Users/лиза/Downloads/1/image.jpg" alt="ссылка-изображение цветок" style="width: 600px;"></a></li>
+            <li><a href="/about">сокращенная ссылка на внутреннюю страницу</a></li>
+            <li><a href="/">сокращенная ссылка на главную страницу</a></li>
+            <li><a href="#форма">ссылка на фрагмент текущей страницы (работает буквально: прокручивает эту страницу до формы)</a></li>
+            <li><a href="https://example.com/?title=Red&action=edit&page=1">ссылка с тремя параметрами в URL</a></li>
+            <li><a href="/goods?id=12345">ссылка с параметром id в URL</a></li>
+            <li><a href="articles.html">относительная на страницу в текущем каталоге (страница articles.html)</a></li>
+            <li><a href="about/box.html">относительная на страницу в каталоге about (страница box.html)</a></li>
+            <li><a href="../articles.html">относительная на страницу в каталоге уровнем выше текущего</a></li>
+            <li><a href="../../articles.html">относительная на страницу в каталоге двумя уровнями выше</a></li>
+            <li><a href="#context">контекстную в тексте абзаца</a></li>
+            <li><a href="http://example.com/page#about">ссылку на фрагмент страницы стороннего сайта</a></li>
+            <li><a href="">ссылки из прямоугольных и круглых областей картинки (HTML-тег map)</a></li>
+            <li><a href="">ссылка с пустым href</a></li>
+            <li><a>ссылка без href</a></li>
+            <li><a href="https://example.com" rel="nofollow"> ссылка, по которой запрещен переход поисковикам</a></li>
+            <li><a href="https://example.com"> <!--noindex-->запрещенная для индексации поисковиками<!--/noindex--></a></li>
+            <li><a href="">ссылка на файл на сервере FTP с авторизацией</a></li>
+        </ul>
+        <p>нумерованный список ссылок с подписями title</p>
+        <ol>
+            <li><a href="https://example.com/" title="сайт номер один">сайт №1</a></li>
+            <li><a href="https://example.com/" title="сайт номер два">сайт №2</a></li>
+            <li><a href="https://example.com/" title="сайт номер три">сайт №3</a></li>
+        </ol>
+        
+        <p id="форма"></p> <h1>Форма</h1>
+        <form action = "/"
+        method = "POST">
+            <label>
+                ФИО: <br />
+                <input name ="filed-name-1"
+                       value ="Введите ваше ФИО"/>
+            </label> <br/>
+            
+            <label>
+                Телефон: <br/>
+                <input name ="field-telephone"
+                       type="tel"
+                       placeholder ="Введите свой номер телефона"/>
+            </label> <br/>
+                
+            <label> <p id="context"></p>
+                Электронная почта: <br/>
+                <input name="field-email"
+                       type ="email"
+                       placeholder ="Введите вашу почту"/>
+            </label><br/>
+            
+            <label>
+                Дата рождения:<br/>
+                <input name="field-date"
+                       value="2000-01-01"
+                       type="date"/>
+            </label> <br/>
+            
+            Ваш пол:<br/>
+            <label>
+                <input type="radio" checked="checked"
+                       name="radio-group-1" value="Значение1"/>
+                Мужской
+            </label>
+            <label>
+                <input type="radio"
+                       name="radio-group-1" value="Значение2"/>
+                Женский
+            </label><br/>
+            
+            <label>
+                Любимый язык программирования:<br/>
+                <select name="field-name-4[]"
+            multiple="multiple">
+            <option value="Значение1">Pascal</option>
+            <option value="Значение2">C</option>
+            <option value="Значение3">C++</option>
+            <option value="Значение4">JavaScript</option>
+            <option value="Значение5">PHP</option>
+            <option value="Значение6">Python</option>
+            <option value="Значение7">Java</option>
+            <option value="Значение8">Haskel</option>
+            <option value="Значение9">Clojure</option>
+            <option value="Значение10">Prolog</option>
+            <option value="Значение11">Scala</option>
+        </select>
+            </label><br/>
+            
+            <label>
+                Биография:<br />
+                <textarea name="field-name-2">напишите о себе</textarea>
+            </label><br />
+            
+            <label>
+                <input type="checkbox" checked="checked"
+                       name="check-1"/>
+                С контрактом ознакомлен(-а)
+            </label><br/>
+            
+            <input type="submit" value="Сохранить" />
+    </body>
+</html>
