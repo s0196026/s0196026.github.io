@@ -9,27 +9,43 @@
         <h1>Гиперссылки</h1>
         <p> Для большенства ссылок использовалась https://example.com/</p>
         <ul>
-            <li><a href="https://www.kubsu.ru/">абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
-            <li><a href="kubsu.ru/">абсолютную на главную сайта kubsu.ru в протоколе https</a></li>
-            <li><a href="http://example.com/">
-                    <img src=file:///C:/Users/лиза/Downloads/1/image.jpg" alt="ссылка-изображение цветок" style="width: 600px;"></a></li>
-            <li><a href="/about">сокращенная ссылка на внутреннюю страницу</a></li>
-            <li><a href="/">сокращенная ссылка на главную страницу</a></li>
-            <li><a href="#форма">ссылка на фрагмент текущей страницы (работает буквально: прокручивает эту страницу до формы)</a></li>
-            <li><a href="https://example.com/?title=Red&action=edit&page=1">ссылка с тремя параметрами в URL</a></li>
-            <li><a href="/goods?id=12345">ссылка с параметром id в URL</a></li>
-            <li><a href="articles.html">относительная на страницу в текущем каталоге (страница articles.html)</a></li>
-            <li><a href="about/box.html">относительная на страницу в каталоге about (страница box.html)</a></li>
-            <li><a href="../articles.html">относительная на страницу в каталоге уровнем выше текущего</a></li>
-            <li><a href="../../articles.html">относительная на страницу в каталоге двумя уровнями выше</a></li>
-            <li><a href="#context">контекстную в тексте абзаца</a></li>
-            <li><a href="http://example.com/page#about">ссылку на фрагмент страницы стороннего сайта</a></li>
-            <li><a href="">ссылки из прямоугольных и круглых областей картинки (HTML-тег map)</a></li>
+            <li><a href="https://www.kubsu.ru/">
+                    абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
+            <li><a href="kubsu.ru/">
+                    абсолютную на главную сайта kubsu.ru в протоколе https</a></li>
+            <li><a href="http://example.com/"> 
+                    <img src="https://github.com/s0196026/s0196026.github.io/blob/main/image.jpg?raw=true"
+                         alt="ссылка-изображение цветок" style="width: 500px;"></a></li>
+            <li><a href="/about">
+                    сокращенная ссылка на внутреннюю страницу</a></li>
+            <li><a href="/">
+                    сокращенная ссылка на главную страницу</a></li>
+            <li><a href="#форма">
+                    ссылка на фрагмент текущей страницы (работает буквально: прокручивает эту страницу до формы)</a></li>
+            <li><a href="https://example.com/?title=Red&action=edit&page=1">
+                    ссылка с тремя параметрами в URL</a></li>
+            <li><a href="/goods?id=12345">
+                    ссылка с параметром id в URL</a></li>
+            <li><a href="articles.html">
+                    относительная на страницу в текущем каталоге (страница articles.html)</a></li>
+            <li><a href="about/box.html">
+                    относительная на страницу в каталоге about (страница box.html)</a></li>
+            <li><a href="../articles.html">
+                    относительная на страницу в каталоге уровнем выше текущего</a></li>
+            <li><a href="../../articles.html">
+                    относительная на страницу в каталоге двумя уровнями выше</a></li>
+            <li><a href="#context">
+                    контекстную в тексте абзаца</a></li>
+            <li><a href="http://example.com/page#about">
+                    ссылку на фрагмент страницы стороннего сайта</a></li>
             <li><a href="">ссылка с пустым href</a></li>
             <li><a>ссылка без href</a></li>
-            <li><a href="https://example.com" rel="nofollow"> ссылка, по которой запрещен переход поисковикам</a></li>
-            <li><a href="https://example.com"> <!--noindex-->запрещенная для индексации поисковиками<!--/noindex--></a></li>
-            <li><a href="">ссылка на файл на сервере FTP с авторизацией</a></li>
+            <li><a href="https://example.com" rel="nofollow">
+                    ссылка, по которой запрещен переход поисковикам</a></li>
+            <li><a href="https://example.com">
+                    <!--noindex-->запрещенная для индексации поисковиками<!--/noindex--></a></li>
+            <li><a href="ftp://user:password@example.com/myfile.zip/news.html">
+                    ссылка на файл на сервере FTP с авторизацией</a></li>
         </ul>
         <p>нумерованный список ссылок с подписями title</p>
         <ol>
@@ -37,6 +53,23 @@
             <li><a href="https://example.com/" title="сайт номер два">сайт №2</a></li>
             <li><a href="https://example.com/" title="сайт номер три">сайт №3</a></li>
         </ol>
+        
+        <p>ссылки из прямоугольных и круглых областей картинки (HTML-тег map)</p>
+        <map name="2nd_img">
+            <area
+                shape="rect"
+                coords="40,35,376,124"
+                href="https://moodle.kubsu.ru/"
+                alt="Среда Модульного Динамического Обучения КубГУ">
+            <area
+                shape="circle"
+                coords="197,222,70"
+                href="https://www.kubsu.ru/index.php"
+                alt="Сайт Кубанского Государственного Университета">
+        </map>
+        <img usemap="#2nd_img"
+            src="https://github.com/s0196026/s0196026.github.io/blob/main/image2.jpg?raw=true"
+            alt="ссылка-изображение на медиа материалы университета">
         
         <p id="форма"></p> <h1>Форма</h1>
         <form action = "/"
