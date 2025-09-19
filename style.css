@@ -8,6 +8,7 @@ header {
 body{
     color: #173F5F;
     background-color: #FFFAEA;
+    margin: 0 auto;
 }
 .content{
     padding:10px;
@@ -24,6 +25,7 @@ nav{
     max-width: 200px;
     padding: 5px;
     margin:0 auto;
+    padding-right: 0px;
 }
 .nav_links {
     color: #FFE366;
