@@ -6,8 +6,10 @@ header {
     padding-right: 0px;
 }
 body{
+    box-sizing: border-box;
     color: #173F5F;
     background-color: #FFFAEA;
+    margin: 0 px;
 }
 .content{
     padding:10px;
