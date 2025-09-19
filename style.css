@@ -3,9 +3,9 @@ header {
     background-color: #FFE366;
     width: 100%;
     padding: 10px;
+    padding-right: 0px;
 }
 body{
-    width: 100%;
     color: #173F5F;
     background-color: #FFFAEA;
 }
@@ -48,4 +48,5 @@ footer{
     background-color: #FFE366;
     width: 100%;
     padding: 5px;
+    padding-right: 0px;
 }
