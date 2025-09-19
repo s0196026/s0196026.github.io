@@ -1,10 +1,11 @@
-.head { 
+header { 
     color: #173F5F;
     background-color: #FFE366;
     width: 100%;
     padding: 10px;
 }
 body{
+    width: 100%;
     color: #173F5F;
     background-color: #FFFAEA;
 }
