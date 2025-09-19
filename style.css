@@ -1,20 +1,17 @@
-header { 
+.head { 
     color: #173F5F;
     background-color: #FFE366;
     width: 100%;
     padding: 10px;
-    padding-right: 0px;
 }
 body{
-    box-sizing: border-box;
     color: #173F5F;
     background-color: #FFFAEA;
-    margin: 0 px;
 }
 .content{
     padding:10px;
     margin:0 auto;
-    max-width:900px;
+    max-width:700px;
 }
 #logo_img{
     float:left;
@@ -24,7 +21,7 @@ nav{
     color: #FFE366;
     background-color: #ED553B;
     max-width: 200px;
-    padding: 5px;
+    padding: 2px;
     margin:0 auto;
 }
 .nav_links {
@@ -50,5 +47,4 @@ footer{
     background-color: #FFE366;
     width: 100%;
     padding: 5px;
-    padding-right: 0px;
 }
