@@ -3,6 +3,8 @@
     background-color: #FFE366;
     width: 100%;
     padding: 10px;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 body{
     color: #173F5F;
@@ -48,4 +50,6 @@ footer{
     background-color: #FFE366;
     width: 100%;
     padding: 5px;
+    padding-right: 0px;
+    padding-left: 0px;
 }
