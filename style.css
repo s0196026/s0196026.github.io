@@ -17,6 +17,8 @@ body{
 #logo_img{
     float:left;
     margin-right: 20px;
+    margin-top: 5px;
+    margin-left: 5px;
 }
 nav{
     color: #FFE366;
