@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head id="wrap">
+    <head>
         <title>Задание3</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="C:/Users/лиза/Documents/NetBeansProjects/WEB/public_html/css/style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body><div id="wrap">
-        <header>
-            <img class="logo_img" src="https://github.com/s0196026/s0196026.github.io/blob/main/logo.png?raw=true" alt="Логотип сайта">
+        <header class="item1">
+            <img class="logo_img" src="logo.png" alt="Логотип сайта">
             <nav class="nav_dek">
                 <a class="nav_links" href="#">Ссылка 1</a>
                 <a class="nav_links" href="#">Ссылка 2</a>
@@ -16,12 +16,12 @@
             </nav>
             <h1>Название сайта</h1>
         </header>
-        <nav class="content nav_mob">
+        <nav class="content nav_mob item1">
             <a class="nav_links" href="#">Ссылка 1</a>
             <a class="nav_links" href="#">Ссылка 2</a>
             <a class="nav_links" href="#">Ссылка 3</a>
         </nav>  
-        <div class="content item2">
+        <div class="content item3">
             <h2>Гиперссылки</h2>
         <p> Для большенства ссылок использовалась https://example.com/</p>
         <ul>
@@ -30,7 +30,7 @@
             <li><a href="https://www.kubsu.ru/">
                     Абсолютную на главную сайта kubsu.ru в протоколе https</a></li>
             <li><a href="http://example.com/"> 
-                    <img class="imgcontent" src="https://github.com/s0196026/s0196026.github.io/blob/main/image.jpg?raw=true"
+                    <img class="imgcontent" src="image.jpg"
                          alt="ссылка-изображение цветок" style="width: 500px;"></a></li>
             <li><a href="/about">
                     Сокращенная ссылка на внутреннюю страницу</a></li>
@@ -68,7 +68,7 @@
                         alt="Сайт Кубанского Государственного Университета">
                 </map>
                 <img class="imgcontent" usemap="#2nd_img"
-                     src="https://github.com/s0196026/s0196026.github.io/blob/main/image2.jpg?raw=true"
+                     src="image2.jpg"
                      alt="ссылка-изображение на медиа материалы университета">
             </li>
             <li><a href="">Ссылка с пустым href</a></li>
@@ -87,7 +87,7 @@
                         Ссылка на файл на сервере FTP с авторизацией</a></li>
         </ul>
         </div>
-        <table class="content row_n_cols item1">
+        <table class="content row_n_cols item2">
             <thead>
                 <tr  class="row1">
                     <th>Заголовок колонки 1</th>
@@ -134,7 +134,7 @@
                 </tr>
             </tbody>
         </table>
-        <div class="content">
+        <div class="content item_last">
             <h2 id="форма">Форма</h2>
         <form action = "/"
         method = "POST">
@@ -209,7 +209,7 @@
             <input type="submit" value="Сохранить" />
          </form>
         </div>
-        <footer>
+        <footer class="item_last">
             <p>информация о сайте</p>
         </footer>
     </div></body>
