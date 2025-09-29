@@ -1,10 +1,13 @@
 #wrap{
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
-.item1{}
-.item2{ order: 1;}
-.item3{ order: 2;}
+.item1{ oreder: -1;}
+.item2{ order: 0;}
+.item3{ order: 1;}
 .item_last{ order: 1000;}
 .imgcontent {
     max-width: 100%;
@@ -26,11 +29,6 @@ body{
     color: #173F5F;
     background-color: #FFFAEA;
     margin: 0px;
-}
-.content{
-    margin-top: 10px;
-    width:100%;
-    box-sizing: border-box;
 }
 .nav_mob{
     color: #FFE366;
