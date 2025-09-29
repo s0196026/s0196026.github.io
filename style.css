@@ -30,6 +30,7 @@ body{
 .content{
     margin-top: 10px;
     width:100%;
+    box-sizing: border-box;
 }
 .nav_mob{
     color: #FFE366;
@@ -48,6 +49,7 @@ th, td {
     border: 2px solid #FF6B6B;
     padding: 10px;
     text-align: left;
+    word-break: break-word;
 }
 .row1{
     background-color: #FFC500;
