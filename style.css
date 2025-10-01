@@ -1,9 +1,6 @@
 #wrap{
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
-    width: 100%;
-    box-sizing: border-box;
 }
 .item1{ oreder: -1;}
 .item2{ order: 0;}
@@ -30,6 +27,10 @@ body{
     background-color: #FFFAEA;
     margin: 0px;
 }
+.content{
+        padding-top: 10px;
+        width: 100%;
+    }
 .nav_mob{
     color: #FFE366;
     background-color: #ED553B;
@@ -85,7 +86,7 @@ footer{
     }
     .content{
         padding-top: 10px;
-        margin:0 auto;
+        margin: 0 auto;
         max-width:700px;
     }
     .nav_mob{
