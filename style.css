@@ -70,19 +70,19 @@ footer{
 }
 
 @media screen and (min-width: 720px){
-    .nav_dek {
-        visibility: visible;
-    }
     .item1{order: 0;}
     .item2{order: 0;}
     .item3{order: 0;}
     .item_last{order: 0;}
     .nav_dek{
+        visibility: visible;
+        margin-left: auto;
+        margin-right: 0;   
         color: #FFE366;
         background-color: #ED553B;
-        max-width: 200px;
+        width: 400px;
         padding: 2px;
-        margin:0 auto;
+        gap:50px;
     }
     .content{
         padding-top: 10px;
