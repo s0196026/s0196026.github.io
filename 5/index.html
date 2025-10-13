@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Bootstrap</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="newjavascript.js" async></script>
+    </head>
+    <body>
+        <h3 id=>Калькулятор стоимости заказа</h3>
+        <form>
+            <p>Выбор товара из списка:</p>
+                            <select name="select1">
+                                <option value="o1">Тетрадь</option>
+                                <option value="o2">Яблоко</option>
+                                <option value="o3">Часы</option>
+                                <option value="o4">Рубашка</option>
+                            </select>
+                            <p>Сколько единиц товара приобрести:</p>
+                            <input name="text1" type="number"></br>
+                            <button class="mt-2" onclick="return count();">Подсчитать стоимость</button>
+                            <p id="result"></p>
+                        </form>
+    </body>
+</html>
