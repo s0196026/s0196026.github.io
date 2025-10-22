@@ -3,8 +3,8 @@
         let s = document.getElementsByName("select1")[0];
         let t = document.getElementsByName("text1");
         let r = document.getElementById("result");
-        if(isNaN(t[0].value) || t[0].value ===""|| t[0].value<=0){
-            r.innerHTML ="Введите числовое значение!";
+        if(t[0].value ===""|| t[0].value<=0){
+            r.innerHTML ="Введите корректное значение!";
             return false;
         }
         else{
