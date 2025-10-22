@@ -8,12 +8,12 @@
             return false;
         }
         else{
-            let price;
-            if (s.value === "o1") price = 10;
-            else if (s.value === "o2") price = 20;
-            else if (s.value === "o3") price = 100;
-            else if (s.value === "o4") price = 70;
-            else price = 0;
+            let price={
+                "o1"=10;
+                "o2"=20;
+                "o3"=100;
+                "o4"=70;
+            }
             r.innerHTML ="Стоимость заказа: "+t[0].value*price+" рублей";
         }
         return false;
