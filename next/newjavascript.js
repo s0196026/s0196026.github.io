@@ -8,12 +8,13 @@
             return false;
         }
         else{
-            const price={
+            let price={
                 'o1':10,
                 'o2':20,
                 'o3':100,
                 'o4':70
             };
+            const startprice = price[s.value] || 0;
             let res = t[0].value*price;
             r.innerHTML ="Стоимость заказа: "+res+" рублей";
         }
