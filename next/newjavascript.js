@@ -28,7 +28,7 @@ function count(){
         r.innerHTML = "Поле выбора единиц товара не может быть пустым!";
         return false;
     }
-    else if (isNaN(t.value) || /^0/.test(t.value)) {
+    else if (isNaN(t.value)<=0 || /^0/.test(t.value)) {
         r.innerHTML = "Введите корректное числовое значение!";
         return false;
     }
