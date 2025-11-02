@@ -8,21 +8,53 @@
         <script src="newjavascript.js" defer></script>
     </head>
     <body>
-<div>
-                        <h3>Калькулятор стоимости заказа</h3>
+        <h3 id="calc">Калькулятор стоимости заказа</h3>
                         <form>
-                            <p class="mb-2">Выбор товара из списка:</p>
-                            <select name="select1">
-                                <option value="o1">Тетрадь (10 рублей/штука)</option>
-                                <option value="o2">Яблоко (20 рублей/штука)</option>
-                                <option value="o3">Часы (100 рублей/штука)</option>
-                                <option value="o4">Рубашка (70 рублей/штука)</option>
-                            </select>
-                            <p class="mt-2 mb-2">Сколько единиц товара приобрести:</p>
-                            <input name="text1" type="number"></br>
-                            <button id="button_click" class="mt-3">Подсчитать стоимость</button>
-                            <p id="result"></p>
+                            <label>
+                                Выбор товара из списка:<br/>
+                                <select name="select1" id="select_product">
+                                    <option value="o1">Тетрадь (10 рублей/штука)</option>
+                                    <option value="o2">Яблоко (20 рублей/штука)</option>
+                                    <option value="o3">Часы (100 рублей/штука)</option>
+                                    <option value="o4">Рубашка (70 рублей/штука)</option>
+                                </select>
+                            </label><br/>
+                            <label class="mt-2">
+                                Сколько единиц товара приобрести:<br/>
+                                <input name="text1"> <p id="exc"></p> </br>
+                            </label><br/>
+                            <div id="choice_radio" class="mt-2">
+                                Доставка: </br>
+                                <label>
+                                    <input type="radio" checked
+                                           name="radio-group-2" value="D1"/> В коробке (50 рублей)
+                                </label>
+                                <label>
+                                    <input type="radio" checked
+                                           name="radio-group-2" value="D2"/> В бумажном пакете (20 рублей)
+                                </label>
+                                <label>
+                                    <input type="radio" checked
+                                           name="radio-group-2" value="D3"/> В пластиковом пакете (30 рублей)
+                                </label><br/>
+                            </div>
+                            <div id="choice_color" class="d-none mt-2">
+                                <label>
+                                    Цвет:<br/>
+                                    <select name="select2">
+                                        <option value="c1">Зелёный (+5 рублей)</option>
+                                        <option value="c2">Жёлтый (+10 рублей)</option>
+                                        <option value="c3">Синий (+15 рублей)</option>
+                                    </select>
+                                </label><br/>
+                            </div>
+                            <div id="choice_check" class="d-none mt-2">
+                                <label>
+                                    <input type="checkbox" name="check2"/>
+                                        Наклейки (+20 рублей)
+                                </label><br/>
+                            </div>
+                            <p id="result" class="mt-2"></p>
                         </form>
-                    </div>
     </body>
 </html>
