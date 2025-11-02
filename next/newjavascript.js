@@ -23,10 +23,9 @@ function count(){
     let s2 = document.getElementsByName("select2")[0];
     let ch = document.getElementsByName("check2")[0];
     let r = document.getElementById("result");
-    let e = document.getElementById("exc");
     
     if(t.value === ""){
-        e.innerHTML = "Поле не может быть пустым!";
+        r.innerHTML = "Поле не может быть пустым!";
         return false;
     }
     else if (isNaN(t.value) || /^0/.test(t.value)) {
@@ -83,4 +82,4 @@ document.addEventListener('DOMContentLoaded', function () {
     
     display();
     count();
-});
+}); 
