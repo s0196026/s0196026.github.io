@@ -25,7 +25,7 @@ function count(){
     let r = document.getElementById("result");
     
     if(t.value === ""){
-        r.innerHTML = "Поле не может быть пустым!";
+        r.innerHTML = "Поле выбора единиц товара не может быть пустым!";
         return false;
     }
     else if (isNaN(t.value) || /^0/.test(t.value)) {
