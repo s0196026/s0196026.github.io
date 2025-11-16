@@ -1,0 +1,25 @@
+body{
+    margin:0;
+    color: #000000;
+    background-color: #FFFFFF;
+}
+header{
+    color: #000000;
+    background-color: #47DFD3;
+}
+footer{
+    color: #000000;
+    background-color: #47DFD3;
+}
+.content {
+  //margin: auto;
+  padding: 30px;
+  width: 100%;
+  //box-sizing: border-box;
+}
+.cover img {
+    margin: 10px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
