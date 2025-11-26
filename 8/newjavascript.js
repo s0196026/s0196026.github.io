@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // В обработчике input/change для каждого поля формы
     popup.addEventListener('change', function () {
         const formData = {
             name: document.getElementsByName('name')[0].value,
@@ -44,9 +43,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function onFormSubmitSuccess() {
         localStorage.removeItem('formData');
-        // или localStorage.clear() если других данных нет
     }
     document.addEventListener('popstate', function(){
         popup.style.display = "none";
     });
 });
+
