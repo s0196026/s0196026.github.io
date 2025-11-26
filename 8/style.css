@@ -37,9 +37,8 @@ body{
 @media screen and (min-width: 720px){
     .Popup-content {
         padding: 0.5rem;
-        border: 1px solid #173F5F;
-        width: 80%;
-        max-width: 500px;
+        width: 100%;
+        max-width: 600px;
         position: relative;
     }
 }
