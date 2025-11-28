@@ -17,18 +17,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    popup.addEventListener('change', function () {
+    // В обработчике input/change для каждого поля формы
+    popup.addEventListener('input', function () {
         const formData = {
             name: document.getElementsByName('name')[0].value,
             email: document.getElementsByName('email')[0].value,
             telephone: document.getElementsByName('telephone')[0].value,
             organization: document.getElementsByName('organization')[0].value,
-            massege: document.getElementsByName('massege')[0].value
+            message: document.getElementsByName('message')[0].value
         };
         localStorage.setItem('formData', JSON.stringify(formData));
     });
-    
-    function openPopup() {
+});
+
+function openPopup() {
         const saved = localStorage.getItem('formData');
         if (saved) {
             const formData = JSON.parse(saved);
@@ -37,15 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementsByName('email')[0].value = formData.email || '';
             document.getElementsByName('telephone')[0].value = formData.telephone || '';
             document.getElementsByName('organization')[0].value = formData.organization || '';
-            document.getElementsByName('massege')[0].value = formData.massege || '';
+            document.getElementsByName('message')[0].value = formData.message || '';
         }
     }
     
     function onFormSubmitSuccess() {
         localStorage.removeItem('formData');
     }
-    document.addEventListener('popstate', function(){
-        popup.style.display = "none";
-    });
-});
-
