@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
                 
+                // Сохраняем данные формы при изменении
                 form.addEventListener('input', function () {
                     const formData = {
                         name: document.getElementsByName('name')[0].value,
@@ -55,8 +56,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     localStorage.setItem('formData', JSON.stringify(formData));
                 });
 
+                // Обработка отправки формы
                 form.addEventListener('submit', function (event) {
-                    event.preventDefault();
+                    event.preventDefault(); // Предотвращаем стандартную отправку формы
 
                     // Проверяем, отмечен ли чекбокс
                     const checkbox = document.getElementsByName('check')[0];
@@ -73,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         message: document.getElementsByName('message')[0].value
                     };
 
+                    // Отправляем данные через Fetch API
                     fetch('https://formcarry.com/s/BcYyM6cOGKV', {
                         method: 'POST',
                         headers: {
@@ -91,10 +94,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         } else {
                             alert('Ошибка отправки: ' + (data.message || 'Неизвестная ошибка'));
                         }
-                    })
-                    .catch(error => {
+                    });
+                    /*.catch(error => {
                         console.error('Ошибка:', error);
                         alert('Произошла ошибка при отправке формы');
-                    });
+                    });*/
                 });
             });
