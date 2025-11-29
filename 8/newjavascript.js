@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function closePopup() {
         popup.style.display = "none";
-        history.back();
+        if (location.hash.includes('#form')) {
+            history.back();
+        }
     }
 
     function openPopup() {
@@ -90,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
 
 
