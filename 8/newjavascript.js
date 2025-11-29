@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = {
             name: document.getElementsByName('name')[0].value,
             email: document.getElementsByName('email')[0].value,
-            telephone: document.getElementsByName('telephone')[0].value,
+            tel: document.getElementsByName('tel')[0].value,
             organization: document.getElementsByName('organization')[0].value,
             message: document.getElementsByName('message')[0].value
         };
@@ -37,7 +37,7 @@ function openPopup() {
             
             document.getElementsByName('name')[0].value = formData.name || '';
             document.getElementsByName('email')[0].value = formData.email || '';
-            document.getElementsByName('telephone')[0].value = formData.telephone || '';
+            document.getElementsByName('tel')[0].value = formData.tel || '';
             document.getElementsByName('organization')[0].value = formData.organization || '';
             document.getElementsByName('message')[0].value = formData.message || '';
         }
@@ -46,3 +46,11 @@ function openPopup() {
     function onFormSubmitSuccess() {
         localStorage.removeItem('formData');
     }
+history.pushState({form: 'open'}, '', '#form');
+window.addEventListener('popstate', function (event) {
+    if (!location.hash.includes('#form')) {
+        closePopup();
+    }
+});
+history.back();
+history.replaceState({}, '', window.location.pathname);
