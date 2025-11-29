@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function closePopup() {
         popup.style.display = "none";
-        //history.back();
+        history.back();
     }
 
     function openPopup() {
@@ -90,5 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
 
