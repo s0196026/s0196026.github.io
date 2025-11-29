@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function closePopup() {
         popup.style.display = "none";
-        history.back();
+        //history.back();
     }
 
     function openPopup() {
@@ -41,18 +41,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     popup.addEventListener('input', function () {
         const formData = {
-            name: document.getElementsByName('name')[0].value,
-            email: document.getElementsByName('email')[0].value,
-            tel: document.getElementsByName('tel')[0].value,
-            organization: document.getElementsByName('organization')[0].value,
-            message: document.getElementsByName('message')[0].value
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            tel: document.getElementById('tel').value,
+            organization: document.getElementById('organization').value,
+            message: document.getElementById('message').value
         };
         localStorage.setItem('formData', JSON.stringify(formData));
     });
 
-    // Обработка отправки формы
     form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Предотвращаем перезагрузку страницы
+        event.preventDefault();
         
         const checkbox = document.getElementById('check');
         if (!checkbox.checked) {
@@ -61,14 +60,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         const formData = {
-            name: document.getElementsByName('name')[0].value,
-            email: document.getElementsByName('email')[0].value,
-            tel: document.getElementsByName('tel')[0].value,
-            organization: document.getElementsByName('organization')[0].value,
-            message: document.getElementsByName('message')[0].value
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            tel: document.getElementById('tel').value,
+            organization: document.getElementById('organization').value,
+            message: document.getElementById('message').value
         };
 
-        // Отправка данных на Formcarry
         fetch('https://formcarry.com/s/BcYyM6cOGKV', {
             method: 'POST',
             headers: {
@@ -81,8 +79,8 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             if (data.code === 200) {
                 alert('Сообщение отправлено!');
-                localStorage.removeItem('formData'); // Очищаем данные
-                closePopup(); // Закрываем попап
+                localStorage.removeItem('formData');
+                closePopup();
             } else {
                 alert('Ошибка отправки: ' + (data.message || 'Попробуйте еще раз'));
             }
