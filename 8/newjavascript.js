@@ -53,8 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Обработка отправки формы
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Предотвращаем перезагрузку страницы
-
-        const checkbox = document.getElementsByName('check')[0];
+        
+        const checkbox = document.getElementById('check');
         if (!checkbox.checked) {
             alert('Необходимо согласиться с политикой обработки персональных данных');
             return;
@@ -92,4 +92,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
