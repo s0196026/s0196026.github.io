@@ -94,10 +94,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         } else {
                             alert('Ошибка отправки: ' + (data.message || 'Неизвестная ошибка'));
                         }
-                    });
-                    /*.catch(error => {
+                    })
+                    .catch(error => {
                         console.error('Ошибка:', error);
                         alert('Произошла ошибка при отправке формы');
-                    });*/
+                    });
                 });
             });
