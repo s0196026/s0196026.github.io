@@ -23,7 +23,6 @@ body{
     padding: 0.25rem;
     border: 1px solid #173F5F;
     max-width: 90%;
-    position: relative;
 }
 
 .close {
@@ -37,8 +36,6 @@ body{
 @media screen and (min-width: 720px){
     .Popup-content {
         padding: 0.5rem;
-        width: 100%;
         max-width: 600px;
-        position: relative;
     }
 }
