@@ -3,13 +3,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const openBtn = document.getElementById("buttonPopup");
     const closeBtn = document.querySelector(".close");
     const form = document.querySelector('#formPopup form');
+    
+    function getFormData() {
+        return {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            tel: document.getElementById('tel').value,
+            organization: document.getElementById('organization').value,
+            message: document.getElementById('message').value
+        };
+    }
 
     function closePopup() {
-        popup.style.display = "none";
-        if (location.hash.includes('#form')) {
-            history.back();
-        }
+    popup.style.display = "none";
+    
+    if (location.hash.includes('#form')) {
+        history.back();
     }
+}
 
     function openPopup() {
         const saved = localStorage.getItem('formData');
@@ -36,22 +47,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+// возврат из попапа
     window.addEventListener('popstate', function (event) {
         if (!location.hash.includes('#form')) {
             closePopup();
         }
     });
     popup.addEventListener('input', function () {
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            tel: document.getElementById('tel').value,
-            organization: document.getElementById('organization').value,
-            message: document.getElementById('message').value
-        };
+        const formData = getFormData();
         localStorage.setItem('formData', JSON.stringify(formData));
     });
 
+// отправка
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         
@@ -61,13 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            tel: document.getElementById('tel').value,
-            organization: document.getElementById('organization').value,
-            message: document.getElementById('message').value
-        };
+        const formData = getFormData();
 
         fetch('https://formcarry.com/s/BcYyM6cOGKV', {
             method: 'POST',
@@ -92,7 +93,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-
-
-
