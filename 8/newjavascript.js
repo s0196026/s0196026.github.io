@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function closePopup() {
-    popup.style.display = "none";
-    
-    if (location.hash.includes('#form')) {
-        history.back();
+        popup.style.display = "none";
+
+        if (location.hash.includes('#form')) {
+            history.back();
         }
     }
 
@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
             closePopup();
         }
     });
-    
     popup.addEventListener('input', function () {
         const formData = getFormData();
         localStorage.setItem('formData', JSON.stringify(formData));
@@ -92,3 +91,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
