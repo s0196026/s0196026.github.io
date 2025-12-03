@@ -83,12 +83,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 localStorage.removeItem('formData');
                 closePopup();
             } else {
-                alert('Ошибка отправки: ' + (data.message || 'Попробуйте еще раз'));
+                alert('Ошибка отправки');
             }
         })
         .catch(error => {
-            alert('Ошибка сети: ' + error.message);
+            alert('Ошибка сети');
         });
     });
 });
+
 
