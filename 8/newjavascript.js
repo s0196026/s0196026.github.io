@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (location.hash.includes('#form')) {
         history.back();
+        }
     }
-}
 
     function openPopup() {
         const saved = localStorage.getItem('formData');
@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             closePopup();
         }
     });
+    
     popup.addEventListener('input', function () {
         const formData = getFormData();
         localStorage.setItem('formData', JSON.stringify(formData));
@@ -91,5 +92,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-
