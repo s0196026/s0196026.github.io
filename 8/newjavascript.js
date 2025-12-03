@@ -84,6 +84,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Сообщение отправлено!');
                 localStorage.removeItem('formData');
                 closePopup();
+
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('tel').value = '';
+                document.getElementById('organization').value = '';
+                document.getElementById('message').value = '';
+                document.getElementById('check').checked = false;
             } else {
                 alert('Ошибка отправки');
             }
@@ -93,5 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
 
