@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-// возврат из попапа
     window.addEventListener('popstate', function (event) {
         if (!location.hash.includes('#form')) {
             closePopup();
@@ -58,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('formData', JSON.stringify(formData));
     });
 
-// отправка
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         
@@ -93,3 +91,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
