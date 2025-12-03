@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
             email: document.getElementById('email').value,
             tel: document.getElementById('tel').value,
             organization: document.getElementById('organization').value,
-            message: document.getElementById('message').value
+            message: document.getElementById('message').value,
+            check: document.getElementById('check').checked
         };
     }
 
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('tel').value = formData.tel || '';
             document.getElementById('organization').value = formData.organization || '';
             document.getElementById('message').value = formData.message || '';
+            document.getElementById('check').checked = formData.check || false;
         }
         
         popup.style.display = "block";
@@ -91,4 +93,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
