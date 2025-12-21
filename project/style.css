@@ -48,9 +48,18 @@
     .header-nav{
         display: none;
     }
+    .nav-mob{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    select{
+        color: #45818E;
+        font-weight: 700;
+    }
     select:focus {
         color: #373B3E;
-        background: #BEC8D1;
     }
 .linksong a{
     text-decoration: none;
@@ -62,7 +71,7 @@
 .linkInf{
     color: #BEC8D1;
 }
-div .info{
+.info{
     font-size: 15pt;
 }
 .tab{
@@ -187,5 +196,16 @@ footer .contw{
     }
     .button{
         width: 100%;
+    }
+    .nav-mob{
+        display: none;
+    }
+    select{
+        color: #45818E;
+        font-weight: 700;
+    }
+    select:focus {
+        color: #373B3E;
+        background: #BEC8D1;
     }
 }

@@ -4,6 +4,12 @@ function alwaysFirst(select) {
     setTimeout(() => firstOption.selected = true);
   });
 }
+function alwaysFirst2(select) {
+    const firstOption = select.options[0];
+    select.addEventListener('change', () => {
+        setTimeout(() => firstOption.selected = true);
+    });
+}
 function getFormData() {
     return {
         name: document.getElementById('name').value,
@@ -17,6 +23,11 @@ function getFormData() {
 document.addEventListener('DOMContentLoaded', function (){
     alwaysFirst(document.getElementById('menu'));
     document.getElementById('menu').addEventListener('change', function () {
+        document.querySelector(this.value)?.scrollIntoView({behavior: 'smooth'});
+        this.selectedIndex = 0;
+    });
+    alwaysFirst2(document.getElementById('menu2'));
+    document.getElementById('menu2').addEventListener('change', function () {
         document.querySelector(this.value)?.scrollIntoView({behavior: 'smooth'});
         this.selectedIndex = 0;
     });
