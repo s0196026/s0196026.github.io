@@ -9,11 +9,11 @@ function getFormData() {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
         tel: document.getElementById('tel').value,
-        organization: document.getElementById('organization').value,
         message: document.getElementById('message').value,
         check: document.getElementById('check').checked
     };
 }
+
 document.addEventListener('DOMContentLoaded', function (){
     alwaysFirst(document.getElementById('menu'));
     document.getElementById('menu').addEventListener('change', function () {
@@ -21,8 +21,7 @@ document.addEventListener('DOMContentLoaded', function (){
         this.selectedIndex = 0;
     });
     
-    $(document).ready(function () {
-        $('.cover').slick({
+    $('.cover').slick({
             slidesToShow: 3,
             slidesToScroll: 3,
             infinite: true,
@@ -37,17 +36,7 @@ document.addEventListener('DOMContentLoaded', function (){
                 }
             ]
         });
-    });
 
-    function getFormData() {
-        return {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            tel: document.getElementById('tel').value,
-            message: document.getElementById('message').value,
-            check: document.getElementById('check').checked
-        };
-    }
     
     function saveFormData() {
         localStorage.setItem('formData', JSON.stringify(getFormData()));
@@ -65,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function (){
      document.querySelector('form').addEventListener('input', saveFormData);
 
     // отправка
+    const form = document.getElementById('comment');
     form.addEventListener('submit', function (event) {
         event.preventDefault();
 
@@ -76,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function (){
 
         const formData = getFormData();
 
-        fetch('https://formcarry.com/s/BcYyM6cOGKV', {
+        fetch('https://formcarry.com/s/aBQVnBfrK1w', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -95,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function (){
                         document.getElementById('tel').value = '';
                         document.getElementById('message').value = '';
                         document.getElementById('check').checked = false;
-                        closePopup();
                     } else {
                         alert('Ошибка отправки: ' + (data.message || 'Попробуйте еще раз'));
                     }
