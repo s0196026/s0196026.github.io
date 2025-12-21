@@ -4,6 +4,16 @@ function alwaysFirst(select) {
     setTimeout(() => firstOption.selected = true);
   });
 }
+function getFormData() {
+    return {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        tel: document.getElementById('tel').value,
+        organization: document.getElementById('organization').value,
+        message: document.getElementById('message').value,
+        check: document.getElementById('check').checked
+    };
+}
 document.addEventListener('DOMContentLoaded', function (){
     alwaysFirst(document.getElementById('menu'));
     document.getElementById('menu').addEventListener('change', function () {
@@ -21,7 +31,8 @@ document.addEventListener('DOMContentLoaded', function (){
                     breakpoint: 719,
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        dots: false
                     }
                 }
             ]
@@ -37,17 +48,21 @@ document.addEventListener('DOMContentLoaded', function (){
             check: document.getElementById('check').checked
         };
     }
-
+    
+    function saveFormData() {
+        localStorage.setItem('formData', JSON.stringify(getFormData()));
+    }
     const saved = localStorage.getItem('formData');
         if (saved) {
             const formData = JSON.parse(saved);
             document.getElementById('name').value = formData.name || '';
             document.getElementById('email').value = formData.email || '';
             document.getElementById('tel').value = formData.tel || '';
-            document.getElementById('organization').value = formData.organization || '';
             document.getElementById('message').value = formData.message || '';
             document.getElementById('check').checked = formData.check || false;
+            
         }
+     document.querySelector('form').addEventListener('input', saveFormData);
 
     // отправка
     form.addEventListener('submit', function (event) {
@@ -89,5 +104,4 @@ document.addEventListener('DOMContentLoaded', function (){
                     alert('Ошибка сети: ' + error.message);
                 });
     });
-
 });

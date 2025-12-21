@@ -43,32 +43,14 @@
         width: 100%;
     }
     header h1{
-        font-size: 64pt;
+        font-size: 40pt;
     }
     .header-nav{
-        position: relative;
-        z-index: 1;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        color: white;
-        font-size: 15pt;
+        display: none;
     }
-    select{
-        font-weight: 700;
-        background: transparent;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        color: inherit;
-    }
-    select:focus option {
+    select:focus {
         color: #373B3E;
-        background: white;
-    }
-    a{
-        text-decoration: none;
-        color: white;
+        background: #BEC8D1;
     }
 .linksong a{
     text-decoration: none;
@@ -81,18 +63,20 @@
     color: #BEC8D1;
 }
 div .info{
-    font-size: 20pt;
+    font-size: 15pt;
 }
 .tab{
-    margin-top: 100px;
+    margin-top: 25px;
 }
 .About_pic{
-    position:absolute;
-    z-index:-11;
+    max-height: 100%;
+    max-width: 100%;
 }
-.About_content{
-    position:relative;
-    z-index:1;
+.About_pic_third1{
+    width: 100%;
+}
+.About_pic_third2{
+    width: 100%;
 }
 .cover {
     max-width: 80%;
@@ -113,9 +97,12 @@ footer{
     background-color: #7ACBDC;
     height: 900px;
     display: flex;
+    flex-direction: column; 
+    justify-content: center;
     align-items: center;
 }
 footer form{
+    width: 80%;
     color: #373B3E;
     font-size: 15pt;
     justify-content: center;
@@ -129,12 +116,76 @@ footer .contw{
     align-items: center;
 }
 .button{
-    width: 100%;
+    width: 80%;
     border: none;
     background-color: #E12885;
     color: white;
 }
+.formimg{
+    width: 301px;
+    height: 342px;
+}
 @media screen and (min-width: 720px){
-      
-
+    header h1{
+        font-size: 64pt;
+    }
+    .header-nav{
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: white;
+        font-size: 15pt;
+    }
+    select{
+        font-weight: 700;
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: inherit;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    div .info{
+        font-size: 20pt;
+    }
+    .About_pic-md{
+        position: absolute;
+        z-index:-1;
+    }
+    .About_content{
+        position:relative;
+        z-index:1;
+    }
+    .tab{
+        margin-top: 100px;
+    }
+    .About_pic_third1{
+        width: 450px;
+        height: 252px;
+    }
+    .About_pic_third2{
+        width: 470px;
+        height: 314px;
+    }
+    footer{
+        margin-top: 50px;
+        flex-direction: row; 
+        justify-content: normal;
+    }
+    footer form{
+        width: 100%;
+    }
+    .formimg{
+        width: auto;
+        height: auto;
+        float: right;
+    }
+    .button{
+        width: 100%;
+    }
 }
