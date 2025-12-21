@@ -89,4 +89,5 @@ document.addEventListener('DOMContentLoaded', function (){
                     alert('Ошибка сети: ' + error.message);
                 });
     });
+
 });
