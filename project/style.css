@@ -140,13 +140,10 @@ footer .contw{
 }
 @media screen and (min-width: 720px){
     forPic1{
-        width: 25%;
+        width: 24%;
     }
     forPic2{
         width: 21%;
-    }
-    forBG{
-        width: 20%;
     }
     header h1{
         font-size: 64pt;
