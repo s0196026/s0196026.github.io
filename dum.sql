@@ -55,3 +55,27 @@ select * from avg_price;
 
 select * from users u
 join good g on u.id_u=g.id_u;
+
+
+create or replace procedure print_employee(x number) as
+begin
+    for c_emp in (select first_name, last_name from EMPLOYEES where EMPLOYEE_id=x)loop
+        dbms_output.put_line(c_emp.first_name ||' '|| c_emp.last_name);
+    end loop;
+end;
+begin
+    print_employee(120);
+end;
+
+create or replace function get_department_avg_salary(x number) return number as
+res number:=0;
+n number:=0;
+begin
+    for c_emp in (select salary from EMPLOYEES where department_id=x)loop
+        res:=res+c_emp.salary;
+        n:=n+1;
+    end loop;
+    return res/n;
+end;
+
+select get_department_avg_salary(100) from DUAL;
